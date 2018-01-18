@@ -16,6 +16,6 @@ var app = express()
 //
 //
 // app.use(routes)
-app.get('/sand-which.git', function(req, res){
+app.get('/', function(req, res){
   res.send('hello world')
 })
