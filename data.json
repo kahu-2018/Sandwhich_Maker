@@ -1,4 +1,63 @@
-{ "sandwich": [
+{ 
+  "sandwich": [
+  [
+    { "id": "1",
+    "name": "Ciabatta"
+    },
+    {
+      "id": "2",
+      "name": "Rye"
+    },
+    {
+      "id": "3",
+      "name": "Sourdough"
+    }
+  ],
 
+  [
+    {
+      "id": "1",
+      "name": "Tofu"
+    },
+    {
+      "id": "2",
+      "name": "Chicken"
+    },
+    {
+      "id": "3",
+      "name": "Tuna"
+    }
+  ],  
 
-] }
+  [
+    {
+      "id": "1",
+      "name": "Cheddar"
+    },
+    {
+      "id": "2",
+      "name": "Mozzarella"
+    },
+    {
+      "id": "3",
+      "name": "Vegan Cheese"
+    }
+  ],
+
+  [
+    {
+      "id": "1",
+      "name": "Tomato"
+    },
+    {
+      "id": "2",
+      "name": "Lettuce"
+    },
+    {
+      "id": "3",
+      "name": "Pickles"
+    }
+  ]
+
+  ] 
+}
