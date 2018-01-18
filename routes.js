@@ -7,8 +7,11 @@ var breadArray = sandwichData.sandwich[0]
 var proteinArray = sandwichData.sandwich[1]
 var cheeseArray = sandwichData.sandwich[2]
 var vegArray = sandwichData.sandwich[3]
-
-console.log(breadArray)
+// var obj={id: [req.params.breadid, 
+//               req.params.breadid, 
+//               req.params.breadid, 
+//               req.params.breadid]
+// }
 
 module.exports = router
 
@@ -22,38 +25,54 @@ router.get('/sandwich/home', function (req, res) {
 
 //choose bread
 router.get('/sandwich/builder', function (req, res) {
-  var breadData = breadArray
+  //var breadData = breadArray
   res.render('sandwich/builder', breadData)
 })
 
 //choose cheese
-router.get('/builder/:id', function (req, res) {
-
-  res.render('sandwich/builder', //data)
-)
+router.get('/builder/:bread_id', function (req, res) {
+  var breadId = req.params.bread_id
+  var obj = breadArray.find(function(item) {
+        return breadId == item.id 
+})
+    res.render('sandwich/builder', obj)
 })
 
 //choose protein
-router.get('/builder/:id/:id', function (req, res) {
-
-  res.render('sandwich/builder', //data)
-)
+router.get('/builder/:bread_id/:cheese_id', function (req, res) {
+  var cheeseId = req.params.cheese_id
+  var obj = cheeseArray.find(function(item) {
+        return cheeseId == item.id 
+})
+    res.render('sandwich/builder', obj)
 })
 
 
 //choose veg
-router.get('/builder/:id/:id/:id', function (req, res) {
-
-  res.render('sandwich/builder', //data)
-)
+router.get('/builder/:bread_id/:cheese_id/:protein_id', function (req, res) {
+  var proteinId = req.params.protein_id
+  var protein = proteinArray.find(function(item) {
+        return proteinId == item.id
+  })
+  res.render('sandwich/builder', protein)
 })
 
 //final
-router.get('/builder/:id/:id/:id/:id', function (req, res) {
+router.get('/builder/:bread_id/:cheese_id/:protein_id/:veg_id', function (req, res) {
+  var breadId = req.params.bread_id
+  var cheeseId = req.params.cheese_id
+  var proteinId = req.params.protein_id
+  var vegId = req.params.veg_id
 
-  res.render('sandwich/final', //data)
-)
+  var objSandwich = {id: [breadId, cheeseId, proteinId, vegId]}
+
+
+
+  console.log(objSandwich.id)
+
+  res.render('sandwich/final', objSandwich)
 })
+
 
 
 
