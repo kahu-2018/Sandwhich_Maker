@@ -16,3 +16,6 @@ var app = express()
 //
 //
 // app.use(routes)
+app.get('/', function(req, res){
+  res.send('hello world')
+})
