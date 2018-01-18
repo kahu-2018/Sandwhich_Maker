@@ -1,8 +1,8 @@
-// var express = require('express')
+ var express = require('express')
 // var hbs = require('express-handlebars')
 // var bodyParser = require('body-parser')
-// var app = express()
-// module.exports = app
+var app = express()
+ module.exports = app
 //
 // // Middleware
 // app.engine('hbs', hbs({
