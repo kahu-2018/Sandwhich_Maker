@@ -21,7 +21,6 @@ router.get('/sandwich/home', function (req, res) {
 //choose bread
 router.get('/sandwich/builder', function (req, res) {
   var baseURL = req.path
-  console.log(req.path)
   res.render('sandwich/builder', { ingredientArray: breadArray, baseURL: baseURL })
 })
 
