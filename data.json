@@ -2,15 +2,18 @@
   "sandwich": [
   [
     { "id": "1",
-    "name": "Ciabatta"
+    "name": "Ciabatta",
+    "image": "/images/ciabatta_top.png"
     },
     {
       "id": "2",
-      "name": "Rye"
+      "name": "Rye",
+    "image": "/images/rye_top.png"
     },
     {
       "id": "3",
-      "name": "Sourdough"
+      "name": "Sourdough",
+      "image": "/images/sourdough_top.png"
     }
   ],
 
