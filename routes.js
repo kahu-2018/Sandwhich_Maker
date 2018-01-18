@@ -2,16 +2,15 @@ var express = require('express')
 var app = express()
 var router = express.Router()
 var sandwichData = require('./data.json')
-var sandwichIngredientArray = sandwichData.sandwich
+
 var breadArray = sandwichData.sandwich[0]
 var proteinArray = sandwichData.sandwich[1]
 var cheeseArray = sandwichData.sandwich[2]
 var vegArray = sandwichData.sandwich[3]
-// var fs = require('fs')
+
+console.log(breadArray)
 
 module.exports = router
-
-console.log(vegArray)
 
 router.get('/', function (req, res) {
   res.redirect('/sandwich/home')
@@ -22,11 +21,9 @@ router.get('/sandwich/home', function (req, res) {
 })
 
 //choose bread
-router.get('sandwich/builder', function (req, res) {
-  var breadData = (sandwichIngredientArray[0])
-  res.render('sandwich/builder', //data)
-)
-
+router.get('/sandwich/builder', function (req, res) {
+  var breadData = breadArray
+  res.render('sandwich/builder', breadData)
 })
 
 //choose cheese
