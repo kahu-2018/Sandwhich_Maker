@@ -7,11 +7,6 @@ var breadArray = sandwichData.sandwich[0]
 var proteinArray = sandwichData.sandwich[1]
 var cheeseArray = sandwichData.sandwich[2]
 var vegArray = sandwichData.sandwich[3]
-// var obj={id: [req.params.breadid, 
-//               req.params.breadid, 
-//               req.params.breadid, 
-//               req.params.breadid]
-// }
 
 module.exports = router
 
@@ -54,11 +49,33 @@ router.get('/builder/:bread_id/:cheese_id/:protein_id/:veg_id', function (req, r
   var proteinId = req.params.protein_id
   var vegId = req.params.veg_id
 
+  var ingredientId = req.params.id
+
   var objSandwich = {id: [breadId, cheeseId, proteinId, vegId]}
 
-  console.log(objSandwich.id)
 
-  res.render('sandwich/final', objSandwich)
+
+//   for (var i=0; i< sandwichData.sandwich.length; i++ {
+    
+//     var obj = sandwichData.sandwich[i].find(function(item) {
+//     return ingredientId == item.id
+// })}
+
+var proteinObj = proteinArray.find(function(item) {
+        return proteinId == item.id
+})
+var breadObj = breadArray.find(function(item) {
+  return breadId == item.id
+})
+var cheeseObj = cheeseArray.find(function(item) {
+  return cheeseId == item.id
+})
+var vegObj = vegArray.find(function(item) {
+  return vegId == item.id
+})
+
+
+  res.render('sandwich/final', {protein:proteinObj, bread:breadObj, cheese:cheeseObj, veg:vegObj })
 })
 
 
