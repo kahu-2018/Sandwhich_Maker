@@ -1,4 +1,78 @@
-{ "sandwich": [
+{ 
+  "sandwich": [
+  [
+    //bread
+    { "id": "1",
+    "name": "Ciabatta"
+    // "image":
+    },
+    {
+      "id": "2",
+      "name": "Rye"
+      // "image":
+    },
+    {
+      "id": "3",
+      "name": "Sourdough"
+      // "image":
+    }
+  ]
 
+  //cheese
+  // [
+  //   {
+  //     "id": "1",
+  //     "name": "Cheddar"
+  //     // "image":
+  //   },
+  //   {
+  //     "id": "2",
+  //     "name": "Mozzarella"
+  //     // "image":
+  //   },
+  //   {
+  //     "id": "3",
+  //     "name": "Vegan Cheese"
+  //     // "image":
+  //   }
+  // ],
 
-] }
+  //veg
+  // [
+  //   {
+  //     "id": "1",
+  //     "name": "Tomato"
+  //     // "image":
+  //   },
+  //   {
+  //     "id": "2",
+  //     "name": "Lettuce"
+  //     // "image":
+  //   },
+  //   {
+  //     "id": "3",
+  //     "name": "Pickles"
+  //     // "image":
+  //   }
+  // ],
+
+  // protein
+//   [
+//     {
+//       "id": "1",
+//       "name": "Tofu"
+//       // "image":
+//     },
+//     {
+//       "id": "2",
+//       "name": "Chicken"
+//       // "image":
+//     },
+//     {
+//       "id": "3",
+//       "name": "Tuna"
+//       // "image":
+//     }
+//   ]
+] 
+}

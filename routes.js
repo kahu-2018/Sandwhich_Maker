@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 var router = express.Router()
-var sandwichData = require('./data.json')
+var sandwichData = require('./testdata.json')
 // var fs = require('fs')
 
 module.exports = router
@@ -10,48 +10,47 @@ router.get('/', function (req, res) {
   res.redirect('/sandwich/home')
 })
 
-// router.get('/home', function (req, res) {
+router.get('/sandwich/home', function (req, res) {
+  res.render('sandwich/home', //data)
+)
+})
 
-//   res.render('sandwich/home/', //data)
-// )
-// })
+//choose bread
+router.get('sandwich/builder', function (req, res) {
 
-// //choose bread
-// router.get('/builder', function (req, res) {
+  res.render('sandwich/builder', //data)
+)
 
-//   res.render('sandwich/builder/', //data)
-// )
+})
 
-// })
+//choose cheese
+router.get('/builder/:id', function (req, res) {
 
-// //choose cheese
-// router.get('/builder/:id', function (req, res) {
+  res.render('sandwich/builder', //data)
+)
+})
 
-//   res.render('sandwich/builder/', //data)
-// )
-// })
+//choose protein
+router.get('/builder/:id/:id', function (req, res) {
 
-// //choose protein
-// router.get('/builder/:id/:id', function (req, res) {
-
-//   res.render('sandwich/builder/', //data)
-// )
-// })
+  res.render('sandwich/builder', //data)
+)
+})
 
 
-// //choose veg
-// router.get('/builder/:id/:id/:id', function (req, res) {
+//choose veg
+router.get('/builder/:id/:id/:id', function (req, res) {
 
-//   res.render('sandwich/builder/', //data)
-// )
-// })
+  res.render('sandwich/builder', //data)
+)
+})
 
-// //final
-// router.get('/builder/:id/:id/:id/:id', function (req, res) {
+//final
+router.get('/builder/:id/:id/:id/:id', function (req, res) {
 
-//   res.render('sandwich/final/', //data)
-// )
-// })
+  res.render('sandwich/final', //data)
+)
+})
 
 
 
