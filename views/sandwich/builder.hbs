@@ -1,9 +1,15 @@
-{{breadData}}
-
 <div class="container">
-  {{#each breadData}}
-  <div class="breadOptions">
-    <button type="button"><a href="./builder/{{id}}">{{Name}}</a></button>
+  <div class="ingredientOptions">
+    <form action="">
+      {{#each ingredientArray}}
+        <input type="radio" name="topping">
+        <img class="topping" src="{{image}}" alt="{{id}}">
+        {{name}}
+      {{/each}}
+
+      <input type="submit">
+    </form>
   </div>
-  {{/each}}
 </div>
+
+
