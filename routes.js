@@ -7,7 +7,7 @@ var sandwichData = require('./data.json')
 module.exports = router
 
 router.get('/', function (req, res) {
-  res.redirect('/home')
+  res.redirect('/sandwich/home')
 })
 
 router.get('/home', function (req, res) {
