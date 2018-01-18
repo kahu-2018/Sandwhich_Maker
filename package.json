@@ -1,0 +1,9 @@
+{
+  "name": "Sandwhich_Maker",
+  "version": "1.0.0",
+  "description": "Sandwhich Maker App",
+  "main": "index.js",
+  "repository": "https://github.com/edi-rose/Sandwhich_Maker.git",
+  "author": "Edi, James, Maia",
+  "license": "MIT"
+}
