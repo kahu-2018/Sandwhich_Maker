@@ -1,15 +1,13 @@
 <div class="container">
   <div class="ingredientOptions">
+    {{baseURL}}
+
     <form action="">
       {{#each ingredientArray}}
-        <input type="radio" name="topping">
-        <img class="topping" src="{{image}}" alt="{{id}}">
+        <a href="{{../baseURL}}/{{id}}"><img class="topping" src="{{image}}" alt="{{id}}"></a>
         {{name}}
       {{/each}}
-
-      <input type="submit">
     </form>
+    
   </div>
 </div>
-
-

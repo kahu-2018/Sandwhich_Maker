@@ -20,28 +20,30 @@ router.get('/sandwich/home', function (req, res) {
 
 //choose bread
 router.get('/sandwich/builder', function (req, res) {
-  res.render('sandwich/builder', { ingredientArray: breadArray })
+  var baseURL = req.path
+  console.log(req.path)
+  res.render('sandwich/builder', { ingredientArray: breadArray, baseURL: baseURL })
 })
 
 //choose protein
-router.get('/builder/:id/:id', function (req, res) {
-
-  res.render('sandwich/builder', { ingredientArray: breadProtein })
+router.get('/sandwich/builder/:id', function (req, res) {
+  var baseURL = req.path
+  res.render('sandwich/builder', { ingredientArray: proteinArray, baseURL: baseURL })
 })
 //choose cheese
-router.get('/builder/:id', function (req, res) {
-
-  res.render('sandwich/builder', { ingredientArray: breadCheese })
+router.get('/sandwich/builder/:id/:id', function (req, res) {
+  var baseURL = req.path
+  res.render('sandwich/builder', { ingredientArray: cheeseArray, baseURL: baseURL })
 })
 
 //choose veg
-router.get('/builder/:id/:id/:id', function (req, res) {
-
-  res.render('sandwich/builder', { ingredientArray: breadVeg })
+router.get('/sandwich/builder/:id/:id/:id', function (req, res) {
+  var baseURL = req.path
+  res.render('sandwich/builder', { ingredientArray: vegArray, baseURL: baseURL })
 })
 
 //final
-router.get('/builder/:id/:id/:id/:id', function (req, res) {
+router.get('/sandwich/builder/:id/:id/:id/:id', function (req, res) {
 
   res.render('sandwich/final', //data)
 )

@@ -1,66 +1,75 @@
-{ 
+{
   "sandwich": [
   [
     { "id": "1",
-    "name": "Ciabatta",
-    "image": "/images/ciabatta_top.png"
+      "name": "Ciabatta",
+      "image": "/images/ciabatta_top.png"
     },
     {
       "id": "2",
       "name": "Rye",
-    "image": "/images/rye_top.png"
+      "image": "/images/rye_top.png"
     },
     {
       "id": "3",
       "name": "Sourdough",
-      "image": "/images/sourdough_top.png"
+        "image": "/images/sourdough_top.png"
     }
   ],
 
   [
     {
       "id": "1",
-      "name": "Tofu"
+      "name": "Tofu",
+      "image": "/images/TofuPatty.png"
     },
     {
       "id": "2",
-      "name": "Chicken"
+      "name": "Chicken",
+      "image": "/images/chicken.png"
     },
     {
       "id": "3",
-      "name": "Tuna"
-    }
-  ],  
-
-  [
-    {
-      "id": "1",
-      "name": "Cheddar"
-    },
-    {
-      "id": "2",
-      "name": "Mozzarella"
-    },
-    {
-      "id": "3",
-      "name": "Vegan Cheese"
+      "name": "Beef",
+      "image": "/images/BeefPatty.png"
     }
   ],
 
   [
     {
       "id": "1",
-      "name": "Tomato"
+      "name": "Cheddar",
+      "image": "http://placedog.com/400/300"
     },
     {
       "id": "2",
-      "name": "Lettuce"
+      "name": "Mozzarella",
+      "image": "http://placedog.com/400/300"
     },
     {
       "id": "3",
-      "name": "Pickles"
+      "name": "Vegan Cheese",
+      "image": "http://placedog.com/400/300"
+    }
+  ],
+
+  [
+    {
+      "id": "1",
+      "name": "Tomato",
+      "image": "/images/tomato.png"
+    },
+    {
+      "id": "2",
+      "name": "Lettuce",
+      "image": "/images/lettuce.png"
+    },
+    {
+      "id": "3",
+      "name": "Pickles",
+      "image": "/images/pickle.png"
     }
   ]
 
-  ] 
+  ]
 }
