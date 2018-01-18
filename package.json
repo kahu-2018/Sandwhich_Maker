@@ -7,6 +7,13 @@
   "author": "Edi, James, Maia",
   "license": "MIT",
   "scripts": {
+    "debug": "nodemon --inspect index --ignore data.json",
+    "test": "jest --watch --noStackTrace",
     "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0"
   }
 }
