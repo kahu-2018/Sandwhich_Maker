@@ -1,10 +1,16 @@
-<p> Wow, you must be some kind of sandcih wizard! What a combo!</p>
+<form action="/">
 
-<p>A delicious {{protein.name}} patty smothered in melted {{cheese.name}} with locally sourced {{veg.name}} all wrapped 
-  in a freshly baked {{bread.name}} bun. Yummy!</p>
+<p> Wow, you must be some kind of sandwich wizard! What a combo!</p>
+
+<p>A delicious <b>{{protein.name}} Patty</b> smothered in melted <b>{{cheese.name}}</b> with locally sourced <b>{{veg.name}}</b>, all wrapped
+  in a freshly baked <b>{{bread.name}}</b> bun. Yummy!</p>
 <div class ='container'>
   <img src="{{bread.image}}">
   <img src="{{cheese.image}}">
   <img src="{{veg.image}}">
   <img src="{{protein.image}}">
+  <img src="{{bread.image2}}">
 </div>
+
+<input type="submit" value="Make Another Sandwich!" />
+</form>
