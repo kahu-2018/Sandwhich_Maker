@@ -1,11 +1,40 @@
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  background-color: lightblue;
+  font-size: 30px
+}
+
 .container {
   max-width:1000px;
   margin: auto; 
-  justify-content: center
+  justify-content: center;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  padding:50px;
+  padding-top:50px
 }
 
 img {
-  max-height: 300px;
-  width: 800px;
-  display: block
+  
+  max-width:75%;
+  display: block;
+  margin: 0 auto
+}
+
+.ingredientOptions {
+  padding-top: 50px
+
+}
+
+#sandwich {
+  padding-top:80px
 }
