@@ -26,56 +26,47 @@ router.get('/sandwich/builder', function (req, res) {
 })
 
 //choose protein
-router.get('/sandwich/builder/:id', function (req, res) {
+router.get('/sandwich/builder/:bread_id/', function (req, res) {
   var baseURL = req.path
   res.render('sandwich/builder', { ingredientArray: proteinArray, baseURL: baseURL })
 })
 //choose cheese
-router.get('/sandwich/builder/:id/:id', function (req, res) {
+router.get('/sandwich/builder/:bread_id/:protein_id/', function (req, res) {
   var baseURL = req.path
   res.render('sandwich/builder', { ingredientArray: cheeseArray, baseURL: baseURL })
 })
 
 //choose veg
-router.get('/sandwich/builder/:id/:id/:id', function (req, res) {
+router.get('/sandwich/builder/:bread_id/:protein_id/:cheese_id', function (req, res) {
   var baseURL = req.path
   res.render('sandwich/builder', { ingredientArray: vegArray, baseURL: baseURL })
 })
 
 //final
-router.get('/builder/:bread_id/:cheese_id/:protein_id/:veg_id', function (req, res) {
-  var breadId = req.params.bread_id
-  var cheeseId = req.params.cheese_id
-  var proteinId = req.params.protein_id
-  var vegId = req.params.veg_id
+router.get('/sandwich/builder/:bread_id/:protein_id/:cheese_id/:veg_id', function (req, res) {
+  var userSandwich = req.params
 
-  var ingredientId = req.params.id
+  var proteinObj = proteinArray.find(function(item) {
+    return userSandwich.protein_id == item.id
+  
+  })
 
-  var objSandwich = {id: [breadId, cheeseId, proteinId, vegId]}
+  var cheeseObj = cheeseArray.find(function(item) {
+    return userSandwich.cheese_id == item.id
+  
+  })
 
+  var breadObj = breadArray.find(function(item) {
+    return userSandwich.bread_id == item.id
+  
+  })
 
+  var vegObj = vegArray.find(function(item) {
+    return userSandwich.veg_id == item.id
+  
+  })
 
-//   for (var i=0; i< sandwichData.sandwich.length; i++ {
-    
-//     var obj = sandwichData.sandwich[i].find(function(item) {
-//     return ingredientId == item.id
-// })}
-
-var proteinObj = proteinArray.find(function(item) {
-        return proteinId == item.id
-})
-var breadObj = breadArray.find(function(item) {
-  return breadId == item.id
-})
-var cheeseObj = cheeseArray.find(function(item) {
-  return cheeseId == item.id
-})
-var vegObj = vegArray.find(function(item) {
-  return vegId == item.id
-})
-
-
-  res.render('sandwich/final', {protein:proteinObj, bread:breadObj, cheese:cheeseObj, veg:vegObj })
+  res.render('sandwich/final', {protein: proteinObj, cheese: cheeseObj, bread: breadObj, veg: vegObj})
 })
 
 
