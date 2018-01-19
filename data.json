@@ -38,18 +38,18 @@
   [
     {
       "id": "1",
-      "name": "Cheddar",
-      "image": "http://placedog.com/400/300"
+      "name": "Swiss cheese",
+      "image": "/images/Swiss_cheese.png"
     },
     {
       "id": "2",
       "name": "Mozzarella",
-      "image": "http://placedog.com/400/300"
+      "image": "/images/Mozzarella.png"
     },
     {
       "id": "3",
       "name": "Vegan Cheese",
-      "image": "http://placedog.com/400/300"
+      "image": "/images/Vegan_cheese.png"
     }
   ],
 
