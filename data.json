@@ -3,17 +3,20 @@
   [
     { "id": "1",
       "name": "Ciabatta",
-      "image": "/images/ciabatta_top.png"
+      "image": "/images/ciabatta_top.png",
+      "image2": "/images/ciabatta_bottom.png"
     },
     {
       "id": "2",
       "name": "Rye",
-      "image": "/images/rye_top.png"
+      "image": "/images/rye_top.png",
+      "image2": "/images/rye_bottom.png"
     },
     {
       "id": "3",
       "name": "Sourdough",
-        "image": "/images/sourdough_top.png"
+      "image": "/images/sourdough_top.png",
+      "image2": "/images/sourdough_bottom.png"
     }
   ],
 
@@ -38,7 +41,7 @@
   [
     {
       "id": "1",
-      "name": "Swiss cheese",
+      "name": "Swiss Cheese",
       "image": "/images/Swiss_cheese.png"
     },
     {
